@@ -7,6 +7,8 @@
 using namespace std::chrono;
 using namespace std;
 
+vector<string> split(string s, char delim);
+
 void MainApp::startGameLoop()
 {
     init();
@@ -195,3 +197,8 @@ MainApp::~MainApp()
     endwin();
 }
 
+vector<string> split(string s, char delim)
+{
+    
+    return {};
+}

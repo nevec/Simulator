@@ -20,7 +20,9 @@ void Owner::buyEstate(shared_ptr<RealEstate> e) {
 void Owner::sellEstate(shared_ptr<RealEstate> e) {
     if (e->owner == this) {
         auto it = find(estate.begin(), estate.end(), e);
-        estate.erase(it);
+        if (it == estate.end())
+            throw invalid_argument("Error");
+        this->estate.erase(it);
         e->owner = nullptr;
         balance += e->getPrice();
     } else {
