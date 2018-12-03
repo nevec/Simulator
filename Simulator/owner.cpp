@@ -54,3 +54,6 @@ void Owner::addEstateIncome() {
     }
 }
 
+Owner::~Owner() {
+  
+}

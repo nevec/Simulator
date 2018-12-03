@@ -17,7 +17,6 @@ private:
     int balance;
     int titushkas_amount;
     vector<shared_ptr<RealEstate>> estate;
-    
 public:
     Owner() : first_name("noname"), last_name("noname"), balance(0),
         titushkas_amount(0), estate() {}
@@ -34,7 +33,7 @@ public:
     vector<shared_ptr<RealEstate>> getEstate() const { return estate; }
     int getBalance() const { return balance; }
     int getTitushkas() const { return titushkas_amount; }
-    ~Owner() {}
+    ~Owner();
 };
 
 #endif // OWNER_HPP

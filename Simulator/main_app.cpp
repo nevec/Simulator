@@ -7,8 +7,6 @@
 using namespace std::chrono;
 using namespace std;
 
-vector<string> split(string s, char delim);
-
 void MainApp::startGameLoop()
 {
     init();
@@ -108,8 +106,12 @@ void MainApp::startGameLoop()
             opts.emplace_back("b", "Go back");
             int target = showMenu("Owners:", opts);
             if (target < npc.size()) {
-                
-                player.doRacket(npc[target]);
+                if (player.getTitushkas() == 0) {
+                    showPopup({"No titushkas("});
+                } else {
+                    player.doRacket(npc[target]);
+                    showPopup({"Success!"});
+                }
             }
         }
     }
@@ -195,10 +197,4 @@ int MainApp::nextEvent()
 MainApp::~MainApp()
 {
     endwin();
-}
-
-vector<string> split(string s, char delim)
-{
-    
-    return {};
 }

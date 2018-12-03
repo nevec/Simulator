@@ -8,7 +8,7 @@ int main(int argc, const char *argv[]) {
     Owner player("User", "Name", 1500);
     Owner npc1("Mykhailo", "Zgurovsky", Infinity);
     Owner npc2("Petro", "Poroshenko", Infinity);
-    Owner npc3("Gill", "Bates", Infinity);
+    Owner npc3("Bill", "Gates", Infinity);
     vector<Owner> npc{npc1, npc2, npc3};
     
     auto e1 = std::make_shared<RealEstate>("Shayrmechnaya", 1000, 200);
